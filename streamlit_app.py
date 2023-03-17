@@ -12,7 +12,7 @@ dataframe = pd.read_csv(
     names=[
         "Airbnb Listing ID",
         "Price",
-        "Latitiude",
+        "Latitude",
         "Longitude",
         "Meters from chosen location",
         "Location",],    
