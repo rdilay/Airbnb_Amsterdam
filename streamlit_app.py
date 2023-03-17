@@ -39,7 +39,7 @@ st.markdown("Below is a map showing all Airbnb listings with a red dot and the l
 
 # Create a plotly express figure
 fig = px.scatter_mapbox(
-    data_frame=dataframe,
+    dataframe,
     lat="Latitude",
     lon="Longitude",
     color="Location",
@@ -50,6 +50,7 @@ fig = px.scatter_mapbox(
     hover_data=["Meters from chosen location", "Location"],
     labels={"colors": "Locations"},
     )
+
 fig.update_geos(center=dict(lat=dataframe.iloc[0][2], lon=dataframe.iloc[0][3]))
 fig.update_layout(mapbox_style="stamen-terrain")
 
